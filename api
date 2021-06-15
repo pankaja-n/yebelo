@@ -1,0 +1,32 @@
+ public class API 
+ {
+    private int oldNumber;
+    private int newNumber;
+    public API(int oldNumber)
+    {
+        this.oldNumber = oldNumber;
+    }
+
+    public int getNewNumber()
+    {
+        for(int i = oldNumber+1; true; i++)
+        {
+            String oldNumberString = String.valueOf(oldNumber);
+            int totalValue = 0;
+            while(totalValue!=1)
+             {
+                for (int n = 0; n <= oldNumberString.length(); n++) 
+                {
+                    char character = oldNumberString.charAt(n);
+                    String characterString = "" + character;
+                    int characterInt = Integer.parseInt(characterString);
+                    totalValue += characterInt;
+                }
+            }
+            newNumber= i;
+            break;
+        }
+        return newNumber;
+    }
+
+}
